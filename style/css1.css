@@ -1,0 +1,32 @@
+@charset "utf-8";
+/*模拟框通用*/
+.clearfix:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }
+.inputWrap input[type=radio],.inputWrap input[type=checkbox]{ display:none;}
+.floatLeft{ float:left !important}
+.floatTop{ float:none !important}
+/*radio*/
+
+ul.simRadio li{ cursor:pointer;}
+ul.simRadio li i{background:url("../images/radio.png") no-repeat; width:36px; height:36px; display:inline-block;}
+ul.simRadio li i.active{ background-position:-36px 0;}
+ul.simRadio li span{ vertical-align:top; display:inline-block; margin-left:5px;}
+
+/*checkbox*/
+ul.simCheck li{ cursor:pointer;}
+ul.simCheck li i{ background:url("../images/checkbox.png") no-repeat; width:36px; height:36px; display:inline-block;}
+ul.simCheck li i.active{ background-position:-36px 0;}
+ul.simCheck li span{ vertical-align:top; display:inline-block; margin-left:5px;}
+
+/*select*/
+.simSelect{ float:left;}
+.simSelect > div{ width:240px; float:left; position:relative; margin-right:30px;}
+.simSelect > div > p{ width:100%; height:36px; position:relative; border:#c9c9c9 1px solid;}
+.simSelect > div > p.active{border:#06b276 1px solid;}
+.simSelect > div > p span{ display:block; text-indent:15px; line-height:36px; font-size:18px; font-weight:400; color:#999; cursor:pointer;}
+.simSelect > div > p i{ position:absolute; top:50%; right:20px; display:block; width:0; height:0; margin-top:-3px; border-top:5px solid #9d9d9d; border-right:5px solid transparent; border-bottom:0; border-left:5px solid transparent;}/*下三角*/
+.simSelect > div > p i.active{ border-top: 0; border-right:5px solid transparent; border-bottom:5px solid #9d9d9d; border-left:5px solid transparent;}/*上三角*/
+.simSelect > div ul{ width:100%; background:#FFF; border:#06b276 1px solid; border-top:0; max-height:185px; overflow:auto; position:absolute; z-index:100; display:none;}
+.simSelect > div ul.active{ display:block;}
+.simSelect > div ul li span{ display:block; font-size:16px; padding:8px 0; text-indent:10px; cursor:pointer;}
+.simSelect > div ul li span:hover{background:#e0e0e0;}
+

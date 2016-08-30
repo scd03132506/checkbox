@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>radio select checked 模拟框</title>
+    <link href="GlobalCss/base.css" rel="stylesheet" type="text/css"/>
+    <link href="style/css1.css" rel="stylesheet" type="text/css"/>
+</head>
+<style>
+    .insWrap{ width:80%; margin:30px auto; }
+    .insText{ color:#ff0000; margin-top:30px; padding-bottom:5px;}
+</style>
+<body>
+<div class="insWrap">
+    <!--<div class="insText">input模拟:</div>
+    <div class="inputWrap">
+        <input type="text" data-placeholder="input文字模拟value"/>
+    </div>-->
+    <div class="insText">radio模拟:</div>
+    <div class="inputWrap">
+        <ul class="simRadio">
+            
+        </ul>
+        <!--<li><input type="radio" name="radio" checked /><i class="active"></i><span>单选按钮1</span></li>
+            <li><input type="radio" name="radio" /><i></i><span>单选按钮2</span></li>
+            <li><input type="radio" name="radio" /><i></i><span>单选按钮3</span></li>
+            <li><input type="radio" name="radio" /><i></i><span>单选按钮4</span></li>-->
+    </div>
+    <div class="clearfix"></div>
+    <div class="insText">checked模拟：</div>
+    <div class="inputWrap">
+        <ul class="simCheck">
+            
+        </ul>
+        <!--<li><input type="checkbox" name="checkbox" /><i></i><span>复选按钮1</span></li>
+            <li><input type="checkbox" name="checkbox" /><i></i><span>复选按钮2</span></li>
+            <li><input type="checkbox" name="checkbox" /><i></i><span>复选按钮3</span></li>
+            <li><input type="checkbox" name="checkbox" /><i></i><span>复选按钮4</span></li>-->
+    </div>
+    <div class="clearfix"></div>
+    <div class="insText">select模拟:</div>
+    <div class="inputWrap">
+        <div class="simSelect">  
+        </div>
+        <!--<div>
+                    <p><input type="hidden" name="select" /><span>请选择</span><i></i></p>
+                    <ul>
+                        <li><span data-value="1">下拉框2</span></li>
+                        <li><span data-value="2">下拉框3</span></li>
+                        <li><span data-value="3">下拉框4</span></li>
+                        <li><span data-value="4">下拉框5</span></li>
+                    </ul>
+                </div>-->
+    </div>
+</div>
+<!--脚本开始-->
+<script src="GlobalJs/jquery-1.12.3.min.js"></script>
+<script src="js/jquery-Accardo1.js"></script>
+<script>
+$(function () {
+	//单选框
+   $.myPlugin.simRadio({
+	   simTag:$('.simRadio'),			//容器
+	   simActive:'active',				//选中class名
+	   simType:'floatLeft',				//横向排列floatLeft纵向排列floatTop
+	   simSum:5,						//添加5个单选框
+	   simCheck:2,						//默认选中第二个
+	   simText:['radio1','radio2','radio3','radio4','radio5']	//单选框文本
+	   });
+	//多选框
+   $.myPlugin.simCheck({
+	   simTag:$('.simCheck'),			//容器
+	   simActive:'active',				//选中class名
+	   simType:'floatLeft',				//横向排列floatLeft纵向排列floatTop
+	   simSum:5,						//添加5个多选框
+	   simText:['checkbox1','checkbox2','checkbox3','checkbox4','checkbox5']	//多选框文本
+	   });
+	//下拉框
+   $.myPlugin.simSelect({
+	   simTag:$('.simSelect'),			//容器
+	   simActive:'active',				//选中class名
+	   simType:'floatLeft',				//横向排列floatLeft纵向排列floatTop
+	   simSum:3,						//添加3个下拉框
+	   simBtnText:['choice11','choice12','choice13'],	//下拉框默认文本
+	   simText:[['dropdown1','dropdown12','dropdown13'],['dropdown111','dropdown122','dropdown133','dropdown144'],['dropdown1111','dropdown1222','dropdown1333']],	//下拉列表文本
+	   simVal:[['1','2','3'],['11','22','33','44'],['111','222','333']]		//下拉列表值
+	   });
+
+})
+</script>
+<!--脚本结束-->
+</body>
+</html>
